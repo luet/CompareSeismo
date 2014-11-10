@@ -23,6 +23,7 @@ Two measures are used to compare the seismograms:
     where ref and syn are vectors.
 -   Correlation returns the minimum of the correlation coefficients. The correlation coefficients are defined in the [numpy reference](http://docs.scipy.org/doc/numpy/reference/generated/numpy.corrcoef.html).
 
+For more usage information see the [tutorial in the Wiki](https://github.com/luet/CompareSeismo/wiki/CompareSeismo-Tutorial)
 Args
 ====
 
