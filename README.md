@@ -16,10 +16,12 @@ This will need to be modified for your system.
 
 Two measures are used to compare the seismograms:
 
--   least square defined as err=
-
+-   least squares error defined as
+    
+    ![](https://github.com/luet/CompareSeismo/blob/master/doc/LeastSquare.png)
+    
     where ref and syn are vectors.
--   Correlation returns the minimum of the correlation coefficients.
+-   Correlation returns the minimum of the correlation coefficients. The correlation coefficients are defined in the [numpy reference](http://docs.scipy.org/doc/numpy/reference/generated/numpy.corrcoef.html)
 
 Args
 ====
@@ -66,5 +68,5 @@ The seismograms to be checked are in `code\_name/EXAMPLES/example\_name/OUTPUT\_
 
 The execution directory is the top level of the repo. e.g. specfem2d, where specfem2d is assumed to contain the directory `EXAMPLES/example_name` 
 
-The seismograms are all the files in `OUTPUT_FILES` with suffix `".sem\*"`
+The seismograms are all the files in `OUTPUT_FILES` with suffix `".sem*"`
 
