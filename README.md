@@ -64,7 +64,7 @@ Example
 Assumptions
 ===========
 
-There is a script called "run\_this\_example.sh" in: code\_name/EXAMPLES/example\_name that is used to run the example.
+There is a script called `run\_this\_example.sh` in: `code\_name/EXAMPLES/example_name` that is used to run the example.
 
 The seismograms to be checked are in `code\_name/EXAMPLES/example\_name/OUTPUT\_FILES`
 
