@@ -21,7 +21,7 @@ Two measures are used to compare the seismograms:
     ![](https://github.com/luet/CompareSeismo/blob/master/doc/LeastSquare.png)
     
     where ref and syn are vectors.
--   Correlation returns the minimum of the correlation coefficients. The correlation coefficients are defined in the [numpy reference](http://docs.scipy.org/doc/numpy/reference/generated/numpy.corrcoef.html)
+-   Correlation returns the minimum of the correlation coefficients. The correlation coefficients are defined in the [numpy reference](http://docs.scipy.org/doc/numpy/reference/generated/numpy.corrcoef.html).
 
 Args
 ====
