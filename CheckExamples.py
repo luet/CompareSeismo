@@ -1,4 +1,7 @@
 #!/usr/bin/python
+
+from __future__ import (absolute_import, division, print_function)
+
 import os
 import numpy as np
 import glob
@@ -30,7 +33,7 @@ def CompareAllSeismograms(ref_dir, example_dir):
   assumption: both directories need to contain a subdirectory OUTPUT_FILES
   """
 
-  print 'ref_dir= %s\nexample_dir= %s' % (ref_dir, example_dir)
+  print('ref_dir= %s\nexample_dir= %s' % (ref_dir, example_dir))
 
   files = glob.glob(ref_dir + '/' + '*.sem*')
 
@@ -39,7 +42,7 @@ def CompareAllSeismograms(ref_dir, example_dir):
   corr_min=1;
   err_max=0.;
 
-  sys.stdout.write("|%-20s| %-13s| %-13s|\n" % ('file name', 'corr', 'err'))
+  print("|%-20s| %-13s| %-13s|" % ('file name', 'corr', 'err'))
 
   for f in files:
     # build reference and synthetics file names
@@ -62,12 +65,11 @@ def CompareAllSeismograms(ref_dir, example_dir):
     err_max=max(err, err_max)
 
     # print results to screen
-    sys.stdout.write("|%20s| %13.5le| %13.5le|\n" % (fname, corr, err))
+    print("|%20s| %13.5le| %13.5le|" % (fname, corr, err))
 
   # print min(coor) max(err)
-  sys.stdout.write("|--------------------------------------------------|\n")
-  sys.stdout.write("|%-20s| %13.5le| %13.5le|\n" % ('min/max',
-                                                    corr_min, err_max))
+  print("|--------------------------------------------------|")
+  print("|%-20s| %13.5le| %13.5le|" % ('min/max', corr_min, err_max))
 
   return (corr_min >= TOL_CORR) & (err_max <= TOL_ERR)
 
@@ -158,8 +160,8 @@ if __name__ == '__main__':
   # compare the seismograms
   #========================
   if CompareAllSeismograms(ref_dir, example_dir):
-    print 'Success'
+    print('Success')
     sys.exit(0)
   else:
-    print 'Failure'
+    print('Failure')
     sys.exit(1)
