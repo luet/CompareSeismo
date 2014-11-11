@@ -1,4 +1,7 @@
 #!/usr/bin/python
+
+from __future__ import (absolute_import, division, print_function)
+
 import os
 import numpy as np
 import glob
@@ -30,7 +33,7 @@ def CompareAllSeismograms(ref_dir, example_dir):
   assumption: both directories need to contain a subdirectory OUTPUT_FILES
   """
 
-  print 'ref_dir= %s\nexample_dir= %s' % (ref_dir, example_dir)
+  print('ref_dir= %s\nexample_dir= %s' % (ref_dir, example_dir))
 
   files = glob.glob(ref_dir + '/' + '*.sem*')
 
@@ -158,8 +161,8 @@ if __name__ == '__main__':
   # compare the seismograms
   #========================
   if CompareAllSeismograms(ref_dir, example_dir):
-    print 'Success'
+    print('Success')
     sys.exit(0)
   else:
-    print 'Failure'
+    print('Failure')
     sys.exit(1)
