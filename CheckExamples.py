@@ -42,7 +42,7 @@ def CompareAllSeismograms(ref_dir, example_dir):
   corr_min=1;
   err_max=0.;
 
-  sys.stdout.write("|%-20s| %-13s| %-13s|\n" % ('file name', 'corr', 'err'))
+  print("|%-20s| %-13s| %-13s|" % ('file name', 'corr', 'err'))
 
   for f in files:
     # build reference and synthetics file names
@@ -65,12 +65,11 @@ def CompareAllSeismograms(ref_dir, example_dir):
     err_max=max(err, err_max)
 
     # print results to screen
-    sys.stdout.write("|%20s| %13.5le| %13.5le|\n" % (fname, corr, err))
+    print("|%20s| %13.5le| %13.5le|" % (fname, corr, err))
 
   # print min(coor) max(err)
-  sys.stdout.write("|--------------------------------------------------|\n")
-  sys.stdout.write("|%-20s| %13.5le| %13.5le|\n" % ('min/max',
-                                                    corr_min, err_max))
+  print("|--------------------------------------------------|")
+  print("|%-20s| %13.5le| %13.5le|" % ('min/max', corr_min, err_max))
 
   return (corr_min >= TOL_CORR) & (err_max <= TOL_ERR)
 
